@@ -29,10 +29,10 @@ class FunctionalTests(unittest.TestCase):
         try:
             head = self.analysis.display_head()
             obj = len(head) == 5
-            self.test_obj.yakshaAssert("TestDisplayHead", obj, "functional")
-            print("TestDisplayHead = Passed" if obj else "TestDisplayHead = Failed")
+            self.test_obj.yakshaAssert("test_display_head", obj, "functional")
+            print("test_display_head = Passed" if obj else "test_display_head = Failed")
         except Exception as e:
-            print("TestDisplayHead = Failed")
+            print("test_display_head = Failed")
 
     def test_highest_age_employee(self):
         """Check if the employee with highest age is identified correctly."""
@@ -54,3 +54,4 @@ class FunctionalTests(unittest.TestCase):
         except Exception as e:
             self.test_obj.yakshaAssert("TestExportToExcel", False, "functional")
             print("TestExportToExcel = Failed")
+
