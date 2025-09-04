@@ -24,11 +24,12 @@ class ExceptionalTests(unittest.TestCase):
         """Test behavior when accessing a non-existent column."""
         try:
             self.analysis.df["Invalid_Column"]
-            self.test_obj.yakshaAssert("TestInvalidColumnAccess", False, "exceptional")
-            print("TestInvalidColumnAccess = Failed")
+            self.test_obj.yakshaAssert("test_invalid_column_access", False, "exceptional")
+            print("test_invalid_column_access = Failed")
         except KeyError:
-            self.test_obj.yakshaAssert("TestInvalidColumnAccess", True, "exceptional")
-            print("TestInvalidColumnAccess = Passed")
+            self.test_obj.yakshaAssert("test_invalid_column_access", True, "exceptional")
+            print("test_invalid_column_access = Passed")
         except:
-            self.test_obj.yakshaAssert("TestInvalidColumnAccess", False, "exceptional")
-            print("TestInvalidColumnAccess = Failed")
+            self.test_obj.yakshaAssert("test_invalid_column_access", False, "exceptional")
+            print("test_invalid_column_access = Failed")
+
