@@ -49,9 +49,8 @@ class FunctionalTests(unittest.TestCase):
         try:
             self.analysis.export_to_excel("employee_data1.xlsx")
             obj = self.analysis.verify_excel_saved("employee_data1.xlsx")
-            self.test_obj.yakshaAssert("TestExportToExcel", obj, "functional")
-            print("TestExportToExcel = Passed" if obj else "TestExportToExcel = Failed")
+            self.test_obj.yakshaAssert("test_export_to_excell", obj, "functional")
+            print("Ttest_export_to_excel = Passed" if obj else "test_export_to_excel = Failed")
         except Exception as e:
-            self.test_obj.yakshaAssert("TestExportToExcel", False, "functional")
-            print("TestExportToExcel = Failed")
-
+            self.test_obj.yakshaAssert("test_export_to_excel", False, "functional")
+            print("test_export_to_excel = Failed")
